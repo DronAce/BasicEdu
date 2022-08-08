@@ -1,10 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, View } from 'react-native';
+import CircleBtn from "../components/CircleBtn";
+import { StyleSheet, View, } from 'react-native';
 
-const WelcomePage = () => {
+const WelcomePage = ({ navigation  }) => {
   return (
     <View style={styles.container}>
-      <Text>WelcomePage</Text>
+      <CircleBtn
+        // style={styles.startBtn}
+        text="Start"
+        onPress={() => navigation.navigate('Numbers')}
+      />
     </View>
   );
 };
@@ -18,5 +23,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
